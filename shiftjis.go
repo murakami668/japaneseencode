@@ -154,9 +154,9 @@ loop:
 			}
 //			err = internal.ErrASCIIReplacement
 //			break
-// if faild  ⌘
-			r = rune(encode1[8211 - 8208])
-			goto write2 
+//  if failed  〓
+			r = rune(encode2[12307 - 12288])
+			goto write2
 		}
 
 	write1:

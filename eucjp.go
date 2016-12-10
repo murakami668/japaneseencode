@@ -161,8 +161,9 @@ func (eucJPEncoder) Transform(dst, src []byte, atEOF bool) (nDst, nSrc int, err 
 			}
 //			err = internal.ErrASCIIReplacement
 //			break
-// if faild  ⌘
-			r = rune(encode1[8211 - 8208])
+//  if failed  〓
+			r = rune(encode2[12307 - 12288])
+			goto write2
 			goto write2
 		}
 

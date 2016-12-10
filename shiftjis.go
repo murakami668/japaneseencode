@@ -151,6 +151,14 @@ loop:
 				if r = rune(encode5[r-encode5Low]); r>>tableShift == jis0208 {
 					goto write2
 				}
+			case encode6Low <= r && r < encode6High:
+				if r = rune(encode6[r-encode6Low]); r>>tableShift == jis0208 {
+					if 0xff <= r {
+						goto write1
+					} else {
+						goto write2
+					}
+				}
 			}
 //			err = internal.ErrASCIIReplacement
 //			break
